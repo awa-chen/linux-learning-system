@@ -1,0 +1,24 @@
+{
+  "agent": "xiaomage",
+  "display": "🛠️ 小码哥",
+  "task": "沙盒内核 + L1~L3 入门课",
+  "status": "done",
+  "started_ms": 1783816785474,
+  "ended_ms": 1783817731852,
+  "progress_pct": 100,
+  "steps": [
+    "搭建 emulator.js 虚拟文件系统 + 命令表",
+    "实现 24 条命令（管道/重定向/权限/三剑客）",
+    "撰写 L1 三课（hello/files/edit）",
+    "撰写 L2 三课（path/permission/find）",
+    "撰写 L3 三课（grep/sed/awk）",
+    "编写 steps.js（24 步，id 101~124）"
+  ],
+  "current_step": "全部完成",
+  "deliverables": [
+    "assets/js/emulator.js",
+    "content/l1-hello.md ~ l3-awk.md（9 课）",
+    "partner-workspace/xiaomage/steps.js",
+    "partner-workspace/xiaomage/REPORT.md"
+  ]
+}

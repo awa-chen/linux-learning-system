@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penguin Path · 企鹅之路 Linux 学习系统</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-logo">🐧</span>
+      <span class="brand-name">Penguin Path</span>
+    </div>
+    <nav class="side-nav">
+      <a href="#roadmap-sec" data-nav="roadmap-sec">🗺️ 能力路线</a>
+      <a href="#progress-sec" data-nav="progress-sec">📊 进度看板</a>
+      <a href="#sandbox" data-view="sandbox" class="side-link">🖥️ 交互沙盒</a>
+      <a href="#doc=roadmap" data-doc="roadmap" class="side-link">📘 12级总纲</a>
+      <a href="#doc=setup-env" data-doc="setup-env" class="side-link">🔧 环境搭建</a>
+      <a href="#doc=resources" data-doc="resources" class="side-link">📚 学习资源</a>
+      <a href="#doc=team-case" data-doc="team-case" class="side-link">🧩 团队案例</a>
+    </nav>
+    <div class="side-foot">从入门到高级工程师<br><small>纯前端 · 零依赖 · 可离线</small></div>
+  </aside>
+
+  <main class="main">
+    <section id="progress-sec" class="panel">
+      <h2>📊 学习进度</h2>
+      <div class="progress-wrap">
+        <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        <span id="progress-text" class="progress-text">0 / 0 课</span>
+      </div>
+      <div class="radar-wrap">
+        <canvas id="radar" width="320" height="320"></canvas>
+        <div class="radar-legend">各能力级别完成度（百分比）</div>
+      </div>
+    </section>
+
+    <section id="roadmap-sec" class="panel">
+      <h2>🗺️ 能力路线（L1 → L12）</h2>
+      <div class="stage-legend">
+        <span class="dot stage-入门"></span>入门
+        <span class="dot stage-初级"></span>初级
+        <span class="dot stage-中级"></span>中级
+        <span class="dot stage-高级"></span>高级
+      </div>
+      <div id="roadmap" class="roadmap"></div>
+    </section>
+
+    <section class="panel" id="doc-sec" hidden>
+      <div class="doc-head">
+        <h2 id="doc-title"></h2>
+      </div>
+      <div id="doc-body" class="reader-body"></div>
+    </section>
+
+    <section class="panel" id="sandbox-sec" hidden>
+      <div class="sandbox-top">
+        <h1 id="sandbox-title">交互沙盒</h1>
+        <div class="sandbox-actions">
+          <select id="lesson-select" class="btn"></select>
+          <button class="btn" id="reset-btn">↺ 重置环境</button>
+        </div>
+      </div>
+      <div class="sandbox-body">
+        <aside class="sandbox-guide" id="guide">
+          <div class="guide-empty">选择上方课程进入引导式练习。</div>
+        </aside>
+        <section class="terminal-wrap">
+          <div class="terminal-bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="term-title">guest@penguin-path: ~</span>
+          </div>
+          <div class="terminal" id="terminal" tabindex="0">
+            <div class="term-output" id="term-output"></div>
+            <div class="term-input-line">
+              <span class="prompt">guest@penguin:~$</span>
+              <input class="term-input" id="term-input" autocomplete="off" spellcheck="false" placeholder="在此输入命令，回车执行">
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <aside id="reader" class="reader"></aside>
+</div>
+
+<!-- 启动自检：任何脚本加载失败都会明确提示，而不是空白 -->
+<script src="assets/js/boot-check.js"></script>
+<!-- 数据层：先加载各伙伴的 steps 分片，再加载索引与正文 -->
+<script src="partner-workspace/xiaomage/steps.js"></script>
+<script src="partner-workspace/yanmishu/steps.js"></script>
+<script src="partner-workspace/xiaozhengge/steps.js"></script>
+<script src="partner-workspace/shaonianpai/steps.js"></script>
+<script src="content/index.js"></script>
+<script src="content/courses.js"></script>
+<script src="content/docs.js"></script>
+
+<script src="assets/js/emulator.js"></script>
+<script src="assets/js/sandbox.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

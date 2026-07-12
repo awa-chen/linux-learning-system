@@ -1,0 +1,24 @@
+{
+  "agent": "yanmishu",
+  "display": "📝 言秘书",
+  "task": "样式 + 资源 + L4~L6 初级课",
+  "status": "done",
+  "started_ms": 1783816819744,
+  "ended_ms": 1783817786548,
+  "progress_pct": 100,
+  "steps": [
+    "编写暗色极客风 style.css（对齐约定类名）",
+    "编写 resources.md（真实书单/官方文档/免费实验平台）",
+    "撰写 L4 四课（user/process/service/package）",
+    "撰写 L5 五课（var/cond/func/io/debug）",
+    "撰写 L6 四课（ip/ss/dns/ssh）",
+    "编写 steps.js（8 步，id 401~408，仅 l4-process/l5-io 开沙盒）"
+  ],
+  "current_step": "全部完成",
+  "deliverables": [
+    "assets/css/style.css",
+    "docs/resources.md",
+    "content/l4-user.md ~ l6-ssh.md（13 课）",
+    "partner-workspace/yanmishu/steps.js"
+  ]
+}
